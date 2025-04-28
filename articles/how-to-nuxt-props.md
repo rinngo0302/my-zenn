@@ -3,7 +3,7 @@ title: "[Nuxt]Propsのメモ"
 emoji: "📌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Nuxt"]
-published: false
+published: true
 ---
 # はじめに
 最近、Nuxtを勉強することになったので、そのついでに気になったことをメモをしていきながら勉強していこうと思います！！
