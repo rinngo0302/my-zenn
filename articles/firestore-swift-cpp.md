@@ -1,5 +1,5 @@
 ---
-title: "[Firestore] Fistoreを使ってSwiftとC++でリアルタイム同期した話"
+title: "[Firestore] Firestoreを使ってSwiftとC++でリアルタイム同期した話"
 emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Swift", "Cpp", "Firestore"]
