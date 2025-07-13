@@ -3,7 +3,7 @@ title: "[Firestore] Firestoreを使ってSwiftとC++でリアルタイム同期�
 emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Swift", "Cpp", "Firestore"]
-published: false
+published: true
 ---
 
 # はじめに
