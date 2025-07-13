@@ -47,44 +47,44 @@ Firebaseのサービスの１つで、クラウド上のデータベースのこ
 めっちゃ簡単！
 基本的にチュートリアルに従えば大丈夫！
 
-[Firebase Console](https://console.firebase.google.com/)にアクセスして、「Firebaseプロジェクトを作成する」をクリックする。
+[Firebase Console](https://console.firebase.google.com/)にアクセスして、「Firebaseプロジェクトを作成する」をクリックします。
 
 ![](https://storage.googleapis.com/zenn-user-upload/7accfffb53b7-20250712.png)
 
-で、そのまま画面に書いている通りに進めていきプロジェクトの作成を完了する。
+で、そのまま画面に書いている通りに進めていき、プロジェクトの作成を完了させます。
 
-次にプラットフォームを選択しなければいけない。
-今回はiOS用なので、**「iOS」** を選択する。
+次にプラットフォームを選択しなければいけません。
+今回はiOS用なので、**「iOS」** を選択します。
 
 ![](https://storage.googleapis.com/zenn-user-upload/ee2a3fb68a82-20250712.png)
 
-次に色々入力する画面が出てくる。
+次に色々入力する画面が出てきます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/ec9d1d3f9293-20250712.png)
 
-まずは、**「Apple バンドルID」** を入力する。
-これはXcodeの.xcodeprojファイルのTargetを選択して、そこの「General」に書いてある。
+まずは、**「Apple バンドルID」** を入力します。
+これはXcodeの.xcodeprojファイルのTargetを選択して、そこの「General」に書いてあります。
 
 ![](https://storage.googleapis.com/zenn-user-upload/36f28474ed70-20250712.png)
 
-それをそのまま打ち込む。
+それをそのまま入力します。
 
-次の画面では、設定ファイルをDLする。
-        **「GoogleService-Info.plistのダウンロード」** というボタンがあるのでそれをクリックしてファイルをダウンロードする。
+次の画面では、設定ファイルをダウンロードします。
+        **「GoogleService-Info.plistのダウンロード」** というボタンがあるのでそれをクリックしてファイルをダウンロードします。
 
-これを、プロジェクトの直下に置く(つまり.swiftがあるところ)。
+これを、プロジェクトの直下に置きます(つまり.swiftがあるところ)。
 
 ![](https://storage.googleapis.com/zenn-user-upload/7362abe2ca35-20250712.png)
 
-次にFirebaseのFirestoreのパッケージを入れる。
-プロジェクトナビゲーター上で右クリックをして、下の画像のように **「Add Package Dependencies」** をクリックする。
+次にFirebaseのFirestoreのパッケージを入れます。
+プロジェクトナビゲーター上で右クリックをして、下の画像のように **「Add Package Dependencies」** をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/2f96ffc742f7-20250713.png)
 
-出てきたウィンドウで`https://github.com/firebase/firebase-ios-sdk`で検索する。
-そして、「Add Package」をクリックする。
-次に出てきたウィンドウでパッケージの中のどのライブラリをインストールするか選べるので、その画面で **「Firebase Firestore」** の「Add to Target」で自分のプロジェクトのターゲットを選択する。
+出てきたウィンドウで`https://github.com/firebase/firebase-ios-sdk`で検索します。
+そして、「Add Package」をクリックします。
+次に出てきたウィンドウでパッケージの中のどのライブラリをインストールするか選べるので、その画面で **「Firebase Firestore」** の「Add to Target」で自分のプロジェクトのターゲットを選択します。
 
-これで基本的な慣行構築は完了しました。
+これで基本的な環境構築は完了しました。
 あとは、このFirestoreを使うために初期化用のコードをコピーして実装しておきましょう。
 
 ```swift
@@ -119,9 +119,9 @@ struct YourApp: App {
 これを実装します。
 
 ## C++側の環境構築
-**Firestore C++ SDK**というものがあり、それをダウンロードしてくる。
-[Firebase for C++](https://firebase.google.com/docs/cpp/setup?hl=ja&_gl=1*13srvj7*_up*MQ..*_ga*MzYzNzgwNTY2LjE3NTIzNjU5MDY.*_ga_CW55HF8NVT*czE3NTIzNjU5MDUkbzEkZzAkdDE3NTIzNjU5MDUkajYwJGwwJGgw&platform=ios)でダウンロードしてくる。
-圧縮ファイルなので、それを解凍して、プロジェクトのどこか適当な場所に置いておく。
+**Firestore C++ SDK**というものがあり、それをダウンロードしてきます。
+[Firebase for C++](https://firebase.google.com/docs/cpp/setup?hl=ja&_gl=1*13srvj7*_up*MQ..*_ga*MzYzNzgwNTY2LjE3NTIzNjU5MDY.*_ga_CW55HF8NVT*czE3NTIzNjU5MDUkbzEkZzAkdDE3NTIzNjU5MDUkajYwJGwwJGgw&platform=ios)でダウンロードしてきます。
+圧縮ファイルなので、それを解凍して、プロジェクトのどこか適当な場所に置いておきます。
 
 そして、`CMakeLists.txt`を書きましょう。
 ```
