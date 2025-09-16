@@ -3,7 +3,7 @@ title: "[Git]UnityのためのGit&SourceTree入門"
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["git", "unity", "sourcetree"]
-published: false
+published: true
 ---
 
 # はじめに
