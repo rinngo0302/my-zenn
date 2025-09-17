@@ -1030,3 +1030,40 @@ gitGraph
 ```
 
 このような状態になります。
+
+何が起きたのか分かりますか？
+`feature/sample1`と`feature/sample2`が並行して進んでいたのが、`feature/sample1`がmainにマージされてから`feature/sample2`が始まっていますよね。
+つまり、`feature/sample2`の過去のGitログが書き変わっているのです。
+
+**リベース** という言葉の通り、土台を置き換えるみたいな意味で覚えておくといいと思います。
+
+## リベースを使ってみる
+それでは実際に使ってみましょう。
+
+それでは、適当に上のような状況を作ってみましょうか。
+- `feature/sample1`
+- `feature/sample2`
+
+の２つのブランチを作成しましょう。
+そして、`feature/sample1`に切り替えてから、
+```c#
+using UnityEngine;
+
+public class ShowLog : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        Debug.Log("Game Scene Start!");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Debug.Log("Game Update");
+    }
+}
+```
+このように変更してください。
+
+これで、コミットしてプッシュしてマージまでしてしまいましょう。
