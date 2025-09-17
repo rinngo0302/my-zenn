@@ -1067,3 +1067,34 @@ public class ShowLog : MonoBehaviour
 このように変更してください。
 
 これで、コミットしてプッシュしてマージまでしてしまいましょう。
+そして、`feature/sample2`に切り替えてください。
+
+```c#
+using UnityEngine;
+
+public class ShowLog : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        Debug.Log("Game Scene Start!");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Debug.Log("Update");
+    }
+}
+```
+
+そしてコミットまでしてください。
+
+ここから、リベースを使っていきます。
+
+まず、mainブランチに移動してください。
+
+![](https://storage.googleapis.com/zenn-user-upload/9358344c2ca0-20250917.png)
+
+そして、プルをしてから`feature/sample2`に戻ってください。
+
