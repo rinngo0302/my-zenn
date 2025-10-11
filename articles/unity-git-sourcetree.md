@@ -341,7 +341,7 @@ Gitはバージョン管理システムであるという話をしましたが�
 そこで、少し注意してほしいのが、コミットはファイルの状態を完璧に記録しているのではなく、**前回から何が増えて何が減ったか** を記録しているんです。
 
 例えば、こんなファイルを新規作成したとします。
-```c#
+```cs
 class Sample : MonoBehavior
 {
     void Start()
@@ -354,7 +354,7 @@ class Sample : MonoBehavior
 これで１回コミットします。そうすると、ファイルを新規作成してコードを記述したという記録が残ります。
 
 次に、このファイルを編集して
-```c#
+```cs
 class Sample : MonoBehavior
 {
     void Start()
@@ -372,7 +372,7 @@ class Sample : MonoBehavior
 実は、そのファイル全体を毎回記録しているというわけではなく、どれだけ変更されたかという**差分** を記録しているんです。
 
 例えばですね、先ほどのコードから、
-```c#
+```cs
 class Sample : MonoBehavior
 {
     void Start()
@@ -385,7 +385,7 @@ class Sample : MonoBehavior
 ここでコミットをすると、`Hello, world!!`が削除されたという記録になります。
 
 さらに、
-```C#
+```C-Sharp
 class Sample : MonoBehavior
 {
     void Start()
@@ -510,7 +510,7 @@ SourceTreeを見てみましょうか。
 1. Assets直下に`Scripts`フォルダを作成
 2. `Scripts`直下に`ShowLog.cs`作成
 3. 以下のスクリプトを記述
-```C#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -711,7 +711,7 @@ SourceTreeでmainブランチを開きます。
 では、まずは最初`fix/change_log1`ブランチで作業をしましょう。
 
 先ほどのコードを少し変更してください。
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -749,7 +749,7 @@ public class ShowLog : MonoBehaviour
 
 では、もう一つの`fix/change_log2`に切り替えましょうか。
 そして、先ほどのスクリプトを
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -799,7 +799,7 @@ public class ShowLog : MonoBehaviour
 このようなコミットになります。(`-`は削除で、`+`は追加を表しています。)
 
 ですが、mainブランチにはすでに１つめのブランチの変更が反映されていますので、
-```c#
+```cs
         Debug.Log("Start!");
 ```
 ですよね。
@@ -856,7 +856,7 @@ mainブランチを右クリックしてください。
 
 では、このファイルを開いてみましょう。
 
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -893,7 +893,7 @@ public class ShowLog : MonoBehaviour
 まあそうですね、今回は新しいブランチの方を優先しましょう。
 
 手動で書き換えて、
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -1046,7 +1046,7 @@ gitGraph
 
 の２つのブランチを作成しましょう。
 そして、`feature/sample1`に切り替えてから、
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -1069,7 +1069,7 @@ public class ShowLog : MonoBehaviour
 これで、コミットしてプッシュしてマージまでしてしまいましょう。
 そして、`feature/sample2`に切り替えてください。
 
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -1118,7 +1118,7 @@ mainブランチを右クリックして、**「現在の変更をmainにリベ�
 
 ![](https://storage.googleapis.com/zenn-user-upload/e41badb40a22-20250918.png)
 
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -1200,7 +1200,7 @@ Gitログはリベースのように綺麗にはなりませんが、やりた�
 `ShowLog.cs`を以下のように変更して、コミットしてください。
 コミットメッセージは「feat: コメントの追加」とでもしておきましょう。
 
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -1223,7 +1223,7 @@ public class ShowLog : MonoBehaviour
 さらにもう一度変更して、コミットします。
 コミットメッセージは「feat: add comment 2」としてください。
 
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
@@ -1304,7 +1304,7 @@ Gitにおけるスタッシュは、**まだコミットしたくない作業途
 まず、作業途中の変更を用意します。
 `ShowLog.cs`を以下のように変更してください。
 
-```c#
+```cs
 using UnityEngine;
 
 public class ShowLog : MonoBehaviour
