@@ -4,6 +4,7 @@ emoji: "💭"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Nuxt, NuxtUI]
 published: true
+publication_name: "comm_vue_nuxt"
 ---
 # はじめに
 最近、あるウェブアプリの開発をするのにNuxt UIを使うことになりました。そこで、めっちゃ便利やなーおもろいなーと思いながら使っていたのですが、少し詰まってしまいました。
