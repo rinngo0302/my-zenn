@@ -4,6 +4,7 @@ emoji: "📘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Nuxt", "NuxtUI"]
 published: false
+publication_name: "comm_vue_nuxt"
 ---
 # はじめに
 Nuxt UI v4がリリースされて、Nuxt UI Proでしか使えなかったコンポーネントが使えるようになりました。
